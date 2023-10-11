@@ -1,6 +1,6 @@
 import './App.css';
 import Article from './components/Article';
-// import { useState } from 'react';
+import { useState } from 'react';
 // import InputMessage from './components/InputMessage';
 // import DisplayMessage from './components/DisplayMessage';
 
@@ -12,24 +12,29 @@ function App() {
   //     <DisplayMessage message={message} />
   //   </>
   // );
-  const cart = [
+  const initialCart = [
     { name: 'apple', emoji: '🍎' },
     { name: 'banana', emoji: '🍌' },
     { name: 'orange', emoji: '🍊' },
     { name: 'pear', emoji: '🍐'},
     { name: 'peach', emoji: '🍑'}
   ];
+  const [cart, setCart] = useState(initialCart);
+  const removeArticle = (article) => {
+    setCart(cart.filter((item) => item !== article));
+  };
   return (
     <div>
       <h1>shopping list</h1>
       <ul>
         {
           cart.map(
-            (article, index) => (
+            (article) => (
               <Article
-                key={index}
+                key={article.name}
                 name={article.name}
                 emoji={article.emoji}
+                removeArticle={removeArticle}
               />
             )
           )
