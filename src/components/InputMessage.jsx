@@ -1,7 +1,4 @@
-import {useState} from 'react';
-
-function InputMessage() {
-    const [message, setMessage] = useState('');
+function InputMessage({setMessage}) {
     function handleChange(e) {
         setMessage(e.target.value);
     }

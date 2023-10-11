@@ -1,5 +1,5 @@
-function DisplayMessage() {
-    return <p></p>
+function DisplayMessage({ message }) {
+    return <p>{message}</p>
 }
 
 export default DisplayMessage;
