@@ -1,15 +1,13 @@
 import './App.css';
-import { useState } from 'react';
+// import { useState } from 'react';
+import InputMessage from './components/InputMessage';
+import DisplayMessage from './components/DisplayMessage';
 
 function App() {
-  const [user, setUser] = useState({name: 'Bob'});
-  const handleClick = () => {
-    setUser({name: 'Alice'});
-  }
   return (
     <>
-      <p>{user.name}</p>
-      <button onClick={handleClick}>Click</button>
+      <InputMessage />
+      <DisplayMessage />
     </>
   );
 }
