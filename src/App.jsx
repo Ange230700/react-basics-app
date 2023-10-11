@@ -2,13 +2,13 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [user, setUser] = useState({name: 'Bob'});
   const handleClick = () => {
-    setCount(count + 1);
+    setUser({name: 'Alice'});
   }
   return (
     <>
-      <p>{count}</p>
+      <p>{user.name}</p>
       <button onClick={handleClick}>Click</button>
     </>
   );
