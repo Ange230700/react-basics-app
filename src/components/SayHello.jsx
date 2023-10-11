@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 
-function SayHello({name, age}) {
-    return <p>Hello, my name is {name}, and I&apos;m {age}.</p>;
+function SayHello({ wilder }) {
+    return (
+        <p>Hello, my name is {wilder.name}, and I know {wilder.languages[0]} among other things.</p>
+    );
 }
 
 SayHello.propTypes = {
-    name: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired
+    wilder: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }).isRequired,
 }
 
 export default SayHello;
