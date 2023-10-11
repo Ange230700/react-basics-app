@@ -1,4 +1,5 @@
 import './App.css';
+import Article from './components/Article';
 // import { useState } from 'react';
 // import InputMessage from './components/InputMessage';
 // import DisplayMessage from './components/DisplayMessage';
@@ -24,8 +25,12 @@ function App() {
       <ul>
         {
           cart.map(
-            (product, index) => (
-              <li key={index}>{product.emoji} {product.name}</li>
+            (article, index) => (
+              <Article
+                key={index}
+                name={article.name}
+                emoji={article.emoji}
+              />
             )
           )
         }
