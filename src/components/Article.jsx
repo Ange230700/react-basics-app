@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function Article({ name, emoji, removeArticle }) {
     return (
-        <li>
+        <li key={name}>
             {emoji} {name}
             <input type="text" defaultValue={name} />
             <button onClick={
