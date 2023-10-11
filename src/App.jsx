@@ -27,8 +27,8 @@ function App() {
   //   languages: ['HTML', 'CSS', 'JavaScript', 'React']
   // };
   // return <SayHello wilder={wilder} />
-  const state = useState();
-  console.log(state);
+  const [count, setCount] = useState(0);
+  console.log(count);
   return <p>Hello World!</p>
 }
 
