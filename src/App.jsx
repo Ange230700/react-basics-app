@@ -11,15 +11,21 @@ function App() {
   //     <DisplayMessage message={message} />
   //   </>
   // );
-  const cart = ['apple', 'banana', 'orange'];
+  const cart = [
+    { name: 'apple', emoji: '🍎' },
+    { name: 'banana', emoji: '🍌' },
+    { name: 'orange', emoji: '🍊' },
+    { name: 'pear', emoji: '🍐'},
+    { name: 'peach', emoji: '🍑'}
+  ];
   return (
     <div>
       <h1>shopping list</h1>
       <ul>
         {
           cart.map(
-            (article, index) => (
-              <li key={index}>{article}</li>
+            (product, index) => (
+              <li key={index}>{product.emoji} {product.name}</li>
             )
           )
         }
