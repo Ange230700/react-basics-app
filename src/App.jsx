@@ -1,5 +1,6 @@
 import './App.css';
 import Article from './components/Article';
+import Button from './components/Button';
 import { useState } from 'react';
 // import InputMessage from './components/InputMessage';
 // import DisplayMessage from './components/DisplayMessage';
@@ -40,6 +41,7 @@ function App() {
           )
         }
       </ul>
+      <Button />
     </div>
   );
 }
